@@ -5,7 +5,7 @@
 }
 .box > div
 {
-	margin: 40px;	
+	margin-left: 40px;
 }
 .text
 {
@@ -14,7 +14,7 @@
 .text_title
 {
 	display: inline-block;
-	text_align: center;
+	text-align: center;
 	font-size: 30px;
 }
 .color_green
@@ -23,9 +23,12 @@
 }
 .box_color_white
 {
-	color: #ffffff;	
+	background-color: #ffffff;
 }
-
+.box_color_grey
+{
+	background-color: #494949;
+}
 body
 {
 	margin: 0;
