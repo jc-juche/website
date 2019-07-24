@@ -3,6 +3,10 @@
 	display: block;
 	width: 100%;
 }
+.box > div
+{
+	margin: 40px;	
+}
 .text
 {
 	font-family: "微软雅黑";
@@ -22,7 +26,7 @@
 	color: #ffffff;	
 }
 
-#body
+body
 {
 	margin: 0;
 	padding: 0;
