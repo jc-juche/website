@@ -1,0 +1,29 @@
+.box
+{
+	display: block;
+	width: 100%;
+}
+.text
+{
+	font-family: "微软雅黑";
+}
+.text_title
+{
+	display: inline-block;
+	text_align: center;
+	font-size: 30px;
+}
+.color_green
+{
+	color: #5eb95e;
+}
+.box_color_white
+{
+	color: #ffffff;	
+}
+
+#body
+{
+	margin: 0;
+	padding: 0;
+}
