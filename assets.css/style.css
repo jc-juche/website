@@ -1,0 +1,14 @@
+.box
+{
+	
+}
+.text
+{
+	font-family: "微软雅黑";
+}
+.text_title
+{
+	display: inline-block;
+	text_align: center;
+	font-size: 30px;
+}
