@@ -1,4 +1,5 @@
-var normal_title = "蒟扯 - 官网 | 更有亲和力的扯淡网站"
+var normal_title = "蒟扯---------------=≡Σ((( つ•̀ω•́)つ"
+var QAQ_title = "'你难道不想扯淡了吗？QAQ';"
 function init()
 {
 	document.addEventListener('visibilitychange',
@@ -7,8 +8,14 @@ function init()
 		if (document.visibilityState == 'hidden')
 		{
 			normal_title = document.title;
-			document.title = '你难道不想扯淡了吗？QwQ';
+			document.title = QAQ_title;
 		}
 		else document.title = normal_title;
 	});
+	setInterval(
+	function()
+	{
+		let now_title = document.title;
+		document.title = now_title.substr(-1) + now_title.substr(0, now_title.length - 1);
+	}, 700)
 }
