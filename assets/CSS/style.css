@@ -24,7 +24,13 @@
 {
 	font-family: "微软雅黑";
 }
-.text,.text_title,.text_subtitle,.text_center,.text_left>p,a
+.text,.text_title,.text_subtitle,.text_center,.text_left>p
+{
+	display: inline-block;
+	margin-left: 20px;
+	width: 95%;
+}
+.text,.text_title,.text_subtitle,.text_center,.text_left>a
 {
 	display: inline-block;
 	margin-left: 20px;
