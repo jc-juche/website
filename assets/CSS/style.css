@@ -69,16 +69,18 @@ div{ border-color: inherit; }
 .text_right{ text-align: right; }
 
 p,a,br{ user-select: none; }
-p,a
+p
 {
 	display: inline-block;
 	width: 100%;
 }
-a
+.link
 {
+	display: inline-block;
+	width: 100%;
 	padding-left: 20px;
-	text-decoration: none;
 }
+a{ text-decoration: none; }
 a:link{ color: #0e90d2; }
 a:hover{ color: #0e90d2; }
 a:active{ color: #0e90d2; }
@@ -158,6 +160,6 @@ input[type=time]
 	font: inherit;
 	background-color: #ebeaea;
 }
-input[type=time]::-webkit-outer-spin-button,input[type=time]::-webkit-inner-spin-button{ -webkit-appearance: none !important; }
+input[type=time]::-webkit-outer-spin-button,input[type=time]::-webkit-inner-spin-button{ -webkit-appearance: none!important; }
 input[type=time]::-ms-clear{ display: none; }
 input[type=time]::-webkit-clear-button{ display: none; }
