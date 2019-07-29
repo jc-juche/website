@@ -1,5 +1,5 @@
-var normal_title = "蒟扯---------------=≡Σ((( つ•̀ω•́)つ"
-var QAQ_title = "你难道不想扯淡了吗？QAQ---------------"
+var normal_title = "蒟扯---------------=≡Σ((( つ•̀ω•́)つ";
+var QAQ_title = "你难道不想扯淡了吗？QAQ---------------";
 
 function init()
 {
@@ -24,10 +24,11 @@ function init()
 		clientID: "b14b7403f78f2709379b",
 		clientSecret: "21135d81b29daabe125ce9c518017e93fe448475",
 		repo: "website",
-		owner: "jc-juche",
+		owner: "Linscon",
 		admin: ["Linscon", "ForkFG"],
 		id: location.href,
-		distractionFreeMode: false
+		distractionFreeMode: false,
+		perPage: 25
 	});
 	gitalk.render("gitalk_container");
 }
