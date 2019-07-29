@@ -24,7 +24,7 @@ function init()
 		clientID: "b14b7403f78f2709379b",
 		clientSecret: "21135d81b29daabe125ce9c518017e93fe448475",
 		repo: "website",
-		owner: "jc_juche",
+		owner: "jc-juche",
 		admin: ["Linscon", "ForkFG"],
 		id: location.href,
 		distractionFreeMode: false,
