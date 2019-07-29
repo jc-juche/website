@@ -1,12 +1,25 @@
+.hide{ display: none!important; }
+.form{}
+.list{}
+
 .box
 {
 	display: inline-block;
 	width: 100%;
 }
-.box>div
+.box:not(body)>div{ margin-left: 40px; }
+
+body
 {
-	margin-left: 40px;
+	margin: 0;
+	padding: 0;
 }
+body>div:not(:first-child)
+{
+	width: calc(100% - 15px)!important;
+}
+div{ border-color: inherit; }
+
 .label
 {
 	border-left-style: solid;
@@ -20,96 +33,131 @@
 	border-left-width: 15px;
 	margin-left: 0!important;
 }
-.text,.text_title,.text_subtitle,.text_center,.text_left
-{
-	font-family: "微软雅黑";
-}
-.text,.text_title,.text_subtitle,.text_center,.text_left>p
+.button
 {
 	display: inline-block;
-	margin-left: 20px;
-	width: 95%;
-}
-.text,.text_title,.text_subtitle,.text_center,.text_left>a
-{
-	display: inline-block;
-	margin-left: 20px;
-	width: 95%;
-}
-.text_title
-{
-	font-size: 33px;
-}
-.text_subtitle
-{
-	font-size: 25px;
-}
-.text_normal
-{
-	font-size: 17px;
-}
-.text_center
-{
-	text-align: center;
-}
-.text_left
-{
-	text-align: left;
-}
-.color_green
-{
-	color: #5eb95e;
-}
-.color_grey
-{
-	color: #494949;
-}
-.sub_color_green
-{
-	border-color: #5eb95e;
-}
-.sub_color_silver
-{
-	border-color: #ebeaea;
-}
-.sub_color_purple
-{
+	width: auto!important;
+	height: 40px;
+	border-width: 5px;
+	border-style: solid;
 	border-color: #b033d5;
-}
-.box_color_grey
-{
-	background-color: #494949;
-}
-.box_color_silver
-{
 	background-color: #ebeaea;
 }
-.box_color_white
+.button>p
 {
-	background-color: #ffffff;
+	display: inline-block;
+	height: 50%;
+	margin-top: 9px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
-body
+
+.text,.text_title,.text_subtitle,.text_center,.text_left{ font-family: "微软雅黑"; }
+.text,.text_title,.text_subtitle,.text_center,.text_left>*
 {
-	margin: 0;
-	padding: 0;
+	display: inline-block;
+	width: 95%;
+	line-height: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.text_title{ font-size: 33px; }
+.text_subtitle{ font-size: 25px; }
+.text_normal{ font-size: 17px; }
+.text_center{ text-align: center; }
+.text_left{ text-align: left; }
+.text_right{ text-align: right; }
+
+p,a,br{ user-select: none; }
+p,a
+{
+	display: inline-block;
+	width: 100%;
 }
 a
 {
+	padding-left: 20px;
 	text-decoration: none;
 }
-a:link
+a:link{ color: #0e90d2; }
+a:hover{ color: #0e90d2; }
+a:active{ color: #0e90d2; }
+a:visited{	color: #0e90d2; }
+
+.color_green,.color_green li>span{ color: #5eb95e; }
+.color_grey,.color_grey li>span{ color: #494949; }
+
+.sub_color_green{ border-color: #5eb95e; }
+.sub_color_green li{ color: #5eb95e; }
+.sub_color_silver{ border-color: #ebeaea; }
+.sub_color_silver li{ color: #ebeaea; }
+.sub_color_purple{ border-color: #b033d5; }
+.sub_color_purple li{ color: #b033d5; }
+
+.box_color_grey{ background-color: #494949; }
+.box_color_silver{ background-color: #ebeaea; }
+.box_color_white{ background-color: #ffffff; }
+
+.focus_color_white div:not(.form):not(.list):not(.link_label):hover{ background-color: #ffffff; }
+.focus_color_white input[type=text]:focus{ background-color: #ffffff; }
+.focus_color_white input[type=time]:focus{ background-color: #ffffff; }
+.focus_color_white .button:hover{ background-color: #ffffff; }
+.focus_color_white li:hover,.focus_color_white a:hover,.focus_color_white p:hover{ background-color: #ffffff; }
+
+ol,ul
 {
-	color: #0e90d2;
+	display: inline-block;
+	width: 100%;
+	padding-left: 0;
+	counter-reset: li_num 0;
 }
-a:hover
+li
 {
-	color: #0e90d2;
+	display: inline-block;
+	width: 100%;
+	list-style: none;
+	counter-increment: li_num 1;
 }
-a:active
+li::before
 {
-	color: #0e90d2;
+	display: inline-block;
+	width: 40px;
+	text-align: right;
+	content: counter(li_num)". ";
 }
-a:visited
+li>span
 {
-	color: #0e90d2;
+	display: inline-block;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding-left: 15px;
 }
+input[type=text]
+{
+	height: 40px;
+	width: 1000px;
+	padding-left: 20px;
+	padding-right: 20px;
+	outline: none;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #b033d5;
+	font: inherit;
+	background-color: #ebeaea;
+}
+input[type=time]
+{
+	height: 40px;
+	width: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+	outline: none;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #b033d5;
+	font: inherit;
+	background-color: #ebeaea;
+}
+input[type=time]::-webkit-outer-spin-button,input[type=time]::-webkit-inner-spin-button{ -webkit-appearance: none !important; }
+input[type=time]::-ms-clear{ display: none; }
+input[type=time]::-webkit-clear-button{ display: none; }
